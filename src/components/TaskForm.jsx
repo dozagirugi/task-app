@@ -1,4 +1,6 @@
 import React from "react";
+import "./TaskForm.css";
+import Tag from "./Tag";
 
 export default function TaskForm() {
   return (
@@ -11,20 +13,24 @@ export default function TaskForm() {
         />
 
         <div className="task_form_bottom_line">
-          <button className="tag">HTML</button>
-          <button className="tag">CSS</button>
-          <button className="tag">JavaScript</button>
-          <button className="tag">React</button>
+          <div>
+            <Tag tagName="HTML" />
+            <Tag tagName="CSS" />
+            <Tag tagName="JavaScript" />
+            <Tag tagName="REACT" />
+          </div>
 
-          <select className="task_status">
-            <option value="todo">할일</option>
-            <option value="todo">진행중</option>
-            <option value="todo">완료</option>
-          </select>
+          <div>
+            <select className="task_status">
+              <option value="todo">할일</option>
+              <option value="todo">진행중</option>
+              <option value="todo">완료</option>
+            </select>
 
-          <button type="submit" className="task_submit">
-            + 추가
-          </button>
+            <button type="submit" className="task_submit">
+              + 추가
+            </button>
+          </div>
         </div>
       </form>
     </header>
